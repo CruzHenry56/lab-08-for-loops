@@ -6,16 +6,20 @@
   </head>
   <body>
     <script>
-    for(var i=1; i<=4; i++){
+    var highestnum = 0;
+    for (var i = 0;i<4; i=i + 1){
       var userinput= prompt("Number Please...");
-      var usernum = parseInt(userinput);
-      if(usernum <=9){
-      } else{ (usernum <=9)
-        console.log("The largest number is " + usernum)
+      var usernum = parseInt(userinput , 10);
+      console.log("User entered: "+ usernum);
+
+      if(usernum > highestnum){
+        highestnum = usernum;
+        console.log("updating highestnum");
+      } else{
+        console.log("This is not the highest number...");
       }
     }
-
-
+    console.log("The largest number is:" + highestnum);
     </script>
   </body>
 </html>
